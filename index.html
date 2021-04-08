@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-
-		<!-- include compass css translation -->
-		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
-
-		<!-- fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-		<!-- import icons -->
-		<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
-
-		<!-- Import favicons -->
-		<link rel="shortcut icon" type="image/png" href="resources/favicon.png"/>
-
-		<title>Welcome to my home</title>
-	</head>
-
-	<div class="outer">
-		<div class="inner">
-			<section class = "gap loadanimation">
-				<img src="resources/avatar.jpg" class="avatar">
-				<h1 class="padDown">I am Michael Dao</h1>
-				<p>I can code <span id="spin"></span></p>
-            		</section>
-
-			<ul class="gap social">
-				<li class="icon-resume tile"><a href= "resources/CV.pdf"><ion-icon name="document"></ion-icon><br><br>Resume</a></li>
-				<li class="icon-transcript tile"><a href="resources/transcript.pdf"><ion-icon name="school"></ion-icon><br><br>Transcript</a></li>
-				<li class="icon-github tile"><a href="https://github.com/michaeldao"><ion-icon name="logo-github"></ion-icon><br><br>GitHub</a></li>
-				<li class="icon-linkedin tile"><a href="https://www.linkedin.com/in/michaelduydao/"><ion-icon name="logo-linkedin"></ion-icon><br><br>LinkedIn</a></li>
-				<li class="icon-email tile"><a href="mailto: daoduymichael@gmail.com"><ion-icon name="mail"></ion-icon><br><br>Email</a></li>
-			</ul>
-		</div>
-	</div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<script>
+function enter() {
+    window.location = 'https://solony.github.io/showcase.html';
+}
+</script>
+<body>
+<div id="container">
+    <audio style="width: 1px; height: 1px; opacity: 0; position: absolute;" id="intro-audio" controls autoplay loop>
+        <source src="./production/intro.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="intro">
+        <div class="title" onclick="enter()">
+            <h2 style="font-weight: lighter !important; cursor: pointer;">Sensory Overloads of Sounds</h2>
+            <p style="color: #B2B2B2; cursor: pointer;">Chihan Feng</p>
+        </div>
+        <div class="bottom-line">
+            <p>If you don't hear anything, make sure your sound is on and the volume is turned up.<br/>And please use headphones for the best experience!</p>
+        </div>
+    </div>
+</div>
+</body>
 </html>
