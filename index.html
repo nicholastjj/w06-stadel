@@ -53,7 +53,7 @@ img {
 #navbar {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
+  bottom: 0; /* Stay on top */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
@@ -73,6 +73,28 @@ img {
   color: black;
 }
 
+/* progress bar Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
 
 </style>
 <div id="navbar">
@@ -108,20 +130,39 @@ held in dublin goethe.
 <img src="https://user-images.githubusercontent.com/82182514/114387815-31076c80-9b93-11eb-9958-48636d7adea8.jpg"
 </img>
 
+<div class="header">
+  <h2>Scroll Indicator</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+
+<div>content...</div>
+
 <!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
 <script>
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    document.getElementById("navbar").style.bottom = "0";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbar").style.bottom = "-50px";
   }
   prevScrollpos = currentScrollPos;
 }
 </script>
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
   <script src="js/scripts.js"></script>
   
   
