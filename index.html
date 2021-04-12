@@ -13,14 +13,20 @@
 </head>
 
 <style>
-h1 {
-    color:black;
-    text-align: center;
+
+.content {
+	max-width: 500px;
+    margin: auto;
+	color:yellow
+    padding: 10px;
 }
 
-p  {
-	color:rgb(128,0,0);
-    text-align: center;
+.content h1{
+	text-align: center;
+}
+
+.content p{
+	text-align: center;
 }
 
 a  {
@@ -41,14 +47,47 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+#navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 
 </style>
-  
+<div id="navbar">
+  <a href="#hyun">Hyun</a>
+  <a href="#arthur">Arthur</a>
+  <a href="#gabriele">Gabriele</a>
+</div>
+<br/>
+<br/>
+
+<div class="content">
 <h1>w06 städelschule exhibition</h1>
 <p><b>this is a test website for the exhibition to be
 held in dublin goethe.</b></p>
 <p>the participating artist are, hyun, arthur, gabriele.</p>
+</div>
 
 <!-- this is how you add a wrapper -->
 <div align="center">
@@ -63,7 +102,25 @@ held in dublin goethe.
 <br/>
 
 <img src="https://user-images.githubusercontent.com/82182514/114322316-b94c2a00-9b1f-11eb-81b0-dc6852ddcc4c.jpg" alt="chinese painting" style="width:297px;height:576px;">
+</img>
+
+<!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
   <script src="js/scripts.js"></script>
+  
+  
 
 </body>
+
