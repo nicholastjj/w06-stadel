@@ -85,14 +85,14 @@ img {
 /* The progress container (grey background) */
 .progress-container {
   width: 100%;
-  height: 8px;
-  background: #ccc;
+  height: 12px;
+  background: rgba(	250, 250, 250, 1);
 }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 8px;
-  background: #4caf50;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.1);
   width: 0%;
 }
 
@@ -131,18 +131,21 @@ held in dublin goethe.
 </img>
 
 <div class="header">
-  <h2>Scroll Indicator</h2>
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>
 </div>
 
-<div>content...</div>
 
 <!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
 <script>
-var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+    myFunction();
+    someOtherFunction();
+};
+
+var prevScrollpos = window.pageYOffset;
+function myFunction() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.bottom = "0";
@@ -151,18 +154,15 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-</script>
-<script>
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
 
-function myFunction() {
+function someOtherFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 </script>
+
   <script src="js/scripts.js"></script>
   
   
