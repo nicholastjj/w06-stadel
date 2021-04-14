@@ -2,15 +2,12 @@
 
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  
-
+<head> 
   <title>w06 drawing room</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -21,17 +18,17 @@ body {
   font-family: Helvetica;
 }
 
-.content {
+.tab-content {
 	max-width: 900px;
     margin: auto;
     padding: 10px;
 }
 
-.content h1{
+.tab-content h1{
 	text-align: center;
 }
 
-.content p{
+.tab-content p{
 	text-align: center;
 }
 
@@ -102,52 +99,6 @@ img {
 }
 
 </style>
-<div id="navbar">
-  <a href="#contact">Contacts</a>
-  <a href="#hyun">Hyun</a>
-  <a href="#arthur">Arthur</a>
-  <a href="#gabriele">Gabriele</a>
-  <a href="#jun">Jun</a>
-</div>
-<br/>
-<br/>
-
-<div class="content">
-<h1>w06 städelschule exhibition</h1>
-<p><b>this is a test website for the exhibition to be
-held in dublin goethe.</b></p>
-<p>the participating artist are, hyun, arthur, gabriele.</p>
-</div>
-
-<!-- this is how you add a wrapper -->
-<div align="center">
-  <a href="https://rateyourmusic.com/list/maybeimbatmanjt/paintings-mentioned-in-deleuzes-%E2%80%98the-logic-of-sensation%E2%80%99/1/" class="nav-link">more...</a>
-</div>
-<br/>
-
-<div class="boxed">
-  this is a test website for the exhibition to be
-held in dublin goethe.
-</div>
-<br/>
-
-<img src="https://user-images.githubusercontent.com/82182514/114429897-23b3a780-9bbe-11eb-8a48-1af69bb2c2a8.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429871-1eeef380-9bbe-11eb-96da-ccd217f5c969.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429919-26ae9800-9bbe-11eb-891b-acf76c9420f9.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429936-29a98880-9bbe-11eb-9b9d-79488749d5bb.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429939-2adab580-9bbe-11eb-9a29-43eb8c8fd770.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429944-2c0be280-9bbe-11eb-9671-cb92e8ba2733.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429946-2ca47900-9bbe-11eb-9e14-0bd194f80e7a.JPG"
-</img>
-<img src="https://user-images.githubusercontent.com/82182514/114429958-2e6e3c80-9bbe-11eb-8d9b-90b3814fdd29.JPG"
-</img>
-
 
 <div class="header">
   <div class="progress-container">
@@ -155,8 +106,65 @@ held in dublin goethe.
   </div>
 </div>
 
-<div class="content">
-<p> © 2021, all rights reserved
+<div id="navbar">
+  <ul class="list-inline nav justify-content-end">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Page 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Page 2</a></li>
+  </ul>
+</div>
+
+		<div class="tab-content">
+		<div id="home" class="tab-pane fade in active">
+        <h1>w06 städelschule exhibition</h1>
+        <p><b>this is a test website for the exhibition to be
+		held in dublin goethe.</b></p>	
+		<p>the participating artist are, hyun, arthur, gabriele.</p>
+        
+        <div align="center">
+  		<a href="https://rateyourmusic.com/list/maybeimbatmanjt/paintings-mentioned-in-deleuzes-%E2%80%98the-			logic-of-sensation%E2%80%99/1/" 					class="nav-link">more...</a>
+		</div>
+		<br/>
+        
+		<div class="boxed">
+ 		this is a test website for the exhibition to be
+		held in dublin goethe.
+		</div>
+		<br/>
+        
+		<img src="https://user-images.githubusercontent.com/82182514/114429897-23b3a780-9bbe-11eb-8a48-1af69bb2c2a8.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429871-1eeef380-9bbe-11eb-96da-ccd217f5c969.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429919-26ae9800-9bbe-11eb-891b-acf76c9420f9.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429936-29a98880-9bbe-11eb-9b9d-79488749d5bb.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429939-2adab580-9bbe-11eb-9a29-43eb8c8fd770.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429944-2c0be280-9bbe-11eb-9671-cb92e8ba2733.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429946-2ca47900-9bbe-11eb-9e14-0bd194f80e7a.JPG"
+        </img>
+        <img src="https://user-images.githubusercontent.com/82182514/114429958-2e6e3c80-9bbe-11eb-8d9b-90b3814fdd29.JPG"
+		</img>
+        <br/>
+        
+        <div class="tab-content">
+		<p> © 2021, all rights reserved
+        </div>
+        
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Some content in menu 1.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+
+
 
 <!-- When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar -->
 <script>
@@ -171,7 +179,7 @@ function myFunction() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.bottom = "0";
   } else {
-    document.getElementById("navbar").style.bottom = "-50px";
+    document.getElementById("navbar").style.bottom = "-70px";
   }
   prevScrollpos = currentScrollPos;
 }
